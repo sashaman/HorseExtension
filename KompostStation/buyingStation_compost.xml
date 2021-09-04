@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_shopItem_buyingStation_compost</name>
+        <functions>
+            <function>$l10n_function_buyingStation_compost</function>
+        </functions>
+        <image>HorseExtension/KompostStation/shopIcon.png</image>
+        <price>3000</price>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <lifetime>1000</lifetime>
+        <dailyUpkeep>0</dailyUpkeep>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>silos</category>
+        <vertexBufferMemoryUsage>48896</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>8640</indexBufferMemoryUsage>
+        <textureMemoryUsage>2097256</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+    <placeableType>buyingStation</placeableType>
+    <filename>HorseExtension/KompostStation/buyingStation_compost.i3d</filename>
+    <hotspots>
+        <hotspot name="Compost" fullName="Compost" imageName="SELLING_POINT" hidable="true" linkNode="6" category="CATEGORY_TRIGGERS"/>
+    </hotspots>
+    <placement testSizeX="10" testSizeZ="20" sizeX="10" sizeZ="20" useRandomYRotation="false" useManualYRotation="true"/>
+    <clearAreas>
+        <clearArea startNode="4|0" widthNode="4|0|0" heightNode="4|0|1"/>
+    </clearAreas>
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="5|0" widthNode="5|0|0" heightNode="5|0|1" />
+        </levelAreas>
+    </leveling>
+    <triggerMarkers>
+        <triggerMarker node="7"/>
+    </triggerMarkers>
+    <tipOcclusionUpdateArea sizeX="10" sizeZ="20"/>
+    <buyingStation stationName="$l10n_buyingStation_compost" appearsOnPDA="false" storageRadius="5" fillSoundIdentifier="fillSound01">
+        <loadTrigger triggerNode="0|0|0|0" fillLitersPerSecond="2000" dischargeNode="0|0|0|1" autoStart="true">
+            <effectNode effectNode="0|0|0|2|0" materialType="unloading" materialTypeId="3" fadeTime="0.5"/>
+            <effectNode effectNode="0|0|0|2|1" materialType="smoke" materialTypeId="1" fadeTime="0.5"/>
+            <effectNode effectNode="0|0|0|2|2" materialType="unloading" materialTypeId="3" fadeTime="0.5"/>
+            <effectNode effectNode="0|0|0|2|3" materialType="unloading" materialTypeId="3" fadeTime="0.5"/>
+        </loadTrigger>
+        <fillType name="compost" priceScale="1"/>
+    </buyingStation>
+</placeable>

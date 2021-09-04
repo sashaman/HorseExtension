@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="10" filename="dirt_diffuse.png"/>
+    <File fileId="11" filename="dirt_normal.png"/>
+    <File fileId="4" filename="lizardBeltSystem_diffuse.png"/>
+    <File fileId="5" filename="lizardBeltSystem_normal.png"/>
+    <File fileId="12" filename="manureSellingSpot_diffuse.png"/>
+    <File fileId="13" filename="manureSellingSpot_normal.png"/>
+    <File fileId="14" filename="manureSellingSpot_specular.png"/>
+    <File fileId="33" filename="$data/maps/textures/american/props/shovelGreen_diffuse.png"/>
+    <File fileId="34" filename="$data/maps/textures/american/props/shovelGreen_normal.png"/>
+    <File fileId="35" filename="$data/maps/textures/american/props/shovelGreen_specular.png"/>
+    <File fileId="30" filename="$data/maps/textures/american/props/wheelbarrowOld_diffuse.png"/>
+    <File fileId="31" filename="$data/maps/textures/american/props/wheelbarrowOld_normal.png"/>
+    <File fileId="32" filename="$data/maps/textures/american/props/wheelbarrowOld_specular.png"/>
+    <File fileId="36" filename="$data/maps/textures/european/props/electricSwitchBoxSet_diffuse.png"/>
+    <File fileId="37" filename="$data/maps/textures/european/props/electricSwitchBoxSet_normal.png"/>
+    <File fileId="38" filename="$data/maps/textures/european/props/electricSwitchBoxSet_specular.png"/>
+    <File fileId="27" filename="$data/maps/textures/shared/warningStripes_diffuse.png"/>
+    <File fileId="28" filename="$data/maps/textures/shared/warningStripes_normal.png"/>
+    <File fileId="29" filename="$data/maps/textures/shared/warningStripes_specular.png"/>
+    <File fileId="7" filename="$data/placeables/farmSilos/farmSilos_diffuse.png"/>
+    <File fileId="8" filename="$data/placeables/farmSilos/farmSilos_normal.png"/>
+    <File fileId="9" filename="$data/placeables/farmSilos/farmSilos_specular.png"/>
+    <File fileId="15" filename="$data/placeables/sheds/easySheds01_diffuse.png"/>
+    <File fileId="19" filename="$data/placeables/sheds/easySheds01_mask.png"/>
+    <File fileId="16" filename="$data/placeables/sheds/easySheds01_normal.png"/>
+    <File fileId="17" filename="$data/placeables/sheds/easySheds01_specular.png"/>
+    <File fileId="24" filename="$data/placeables/sheds/easyShedsLogo_diffuse.png"/>
+    <File fileId="18" filename="$data/shaders/buildingShader.xml"/>
+    <File fileId="26" filename="$data/shaders/decalShader.xml"/>
+    <File fileId="3" filename="$data/shared/default_normal.png"/>
+    <File fileId="25" filename="$data/shared/default_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="default" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="default_mat" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1">
+      <Normalmap fileId="3"/>
+    </Material>
+    <Material name="easySheds01_mat" materialId="6" customShaderId="18">
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
+      <Custommap name="mMaskMap" fileId="19"/>
+    </Material>
+    <Material name="easyShedsLogo_mat" materialId="7" alphaBlending="true" customShaderId="26">
+      <Texture fileId="24"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="25"/>
+    </Material>
+    <Material name="electricSwitchBoxSet_mat" materialId="87">
+      <Texture fileId="36"/>
+      <Normalmap fileId="37"/>
+      <Glossmap fileId="38"/>
+    </Material>
+    <Material name="farmSilos_mat" materialId="8">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="lizardBeltSystem" materialId="9" specularColor="0.8 1 0">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="manure_mat" materialId="10">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+    </Material>
+    <Material name="manureSellingSpot_mat" materialId="11">
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+    </Material>
+    <Material name="shovelGreen_mat" materialId="12">
+      <Texture fileId="33"/>
+      <Normalmap fileId="34"/>
+      <Glossmap fileId="35"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="13" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="warningStripes_mat" materialId="14">
+      <Texture fileId="27"/>
+      <Normalmap fileId="28"/>
+      <Glossmap fileId="29"/>
+    </Material>
+    <Material name="wheelbarrowOld01_mat" materialId="15">
+      <Texture fileId="30"/>
+      <Normalmap fileId="31"/>
+      <Glossmap fileId="32"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="buyingStation_compost.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Compost" nodeId="37">
+      <TransformGroup name="loadingStation" nodeId="38">
+        <TransformGroup name="loadingTriggers" nodeId="39">
+          <TransformGroup name="loadingTrigger1" nodeId="40">
+            <Shape shapeId="1" name="trigger" static="true" trigger="true" collisionMask="1088421888" nodeId="41" materialIds="13" nonRenderable="true" distanceBlending="false"/>
+            <TransformGroup name="dischargeNode" nodeId="42"/>
+            <TransformGroup name="dischargeEffect" nodeId="43">
+              <Shape shapeId="2" name="pipeEffect" clipDistance="100" nodeId="44" materialIds="5" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="3" name="smoke" clipDistance="100" nodeId="45" materialIds="4" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="4" name="mesh" clipDistance="300" nodeId="46" materialIds="5" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="5" name="mesh" clipDistance="300" nodeId="47" materialIds="5" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="conveyor" nodeId="48">
+        <Shape shapeId="6" name="beltSystemIn" clipDistance="100" nodeId="49" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="unloadRoof" clipDistance="100" nodeId="50" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="compostHeap" static="true" clipDistance="200" nodeId="51" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="9" name="compostHeap" static="true" clipDistance="200" nodeId="52" materialIds="10" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape shapeId="10" name="manureSellingSpot" static="true" clipDistance="400" nodeId="53" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="11" name="modularHalls03" static="true" clipDistance="300" nodeId="54" materialIds="6" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="12" name="decalEasySheds" clipDistance="150" nodeId="55" materialIds="7" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+      </Shape>
+      <TransformGroup name="areas" nodeId="56">
+        <TransformGroup name="start" translation="-11.9998 0 -5" nodeId="57">
+          <TransformGroup name="width" translation="0 0 10" nodeId="58"/>
+          <TransformGroup name="height" translation="20 0 0" nodeId="59"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="level" nodeId="60">
+        <TransformGroup name="start" translation="-13 0 -6" nodeId="61">
+          <TransformGroup name="width" translation="0 0 12" nodeId="62"/>
+          <TransformGroup name="height" translation="22 0 0" nodeId="63"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="mapPosition" translation="-5 0 0" nodeId="64"/>
+      <TransformGroup name="warningStripesLoad" nodeId="65">
+        <Shape shapeId="13" name="warningStripesCorner1" clipDistance="200" nodeId="66" materialIds="14" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="14" name="warningStripesCorner2" clipDistance="200" nodeId="67" materialIds="14" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="15" name="warningStripesCorner3" clipDistance="200" nodeId="68" materialIds="14" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="16" name="warningStripesCorner4" clipDistance="200" nodeId="69" materialIds="14" receiveShadows="true" decalLayer="1"/>
+      </TransformGroup>
+      <TransformGroup name="Deco" nodeId="70">
+        <Shape shapeId="17" name="wheelbarrowRusty01" translation="-4.41794 -0.0179963 2.50457" rotation="-9.5995e-07 72.198 -2.00899" clipDistance="40" nodeId="71" materialIds="15" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="18" name="col" translation="-7.62939e-08 0.395154 -0.316281" visibility="false" static="true" density="0.0001" nodeId="72" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="compostHeap" translation="0.0157928 0.716551 -0.115831" scale="0.0860045 0.1 0.144916" static="true" clipDistance="200" nodeId="73" materialIds="10" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="19" name="shovelGreen" translation="-4.52361 -0.0110085 2.97926" rotation="173.355 -5.00896e-06 -180" scale="1.2022 1.1435 1.20519" dynamic="true" clipDistance="53" nodeId="74" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true">
+          <Shape shapeId="20" name="shovelGreen_vis" clipDistance="53" nodeId="75" materialIds="12" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="21" name="switchBox03" translation="-3.58347 0.227554 -3.76937" rotation="-0 180 -0" clipDistance="50" nodeId="434" materialIds="87" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="22" name="col" translation="1.11354e-08 -0.00527312 -0.0103363" visibility="false" static="true" density="0.0001" nodeId="435" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </Shape>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

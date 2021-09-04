@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <sprayTypes>
+        <sprayType name="FERTILIZER"       litersPerSecond="0.0120" type="FERTILIZER" groundType="1" />
+        <sprayType name="LIQUIDFERTILIZER" litersPerSecond="0.0160" type="FERTILIZER" groundType="1" />
+        <sprayType name="MANURE"           litersPerSecond="0.4000" type="FERTILIZER" groundType="2" />
+        <sprayType name="LIQUIDMANURE"     litersPerSecond="0.4000" type="FERTILIZER" groundType="3" />
+        <sprayType name="DIGESTATE"        litersPerSecond="0.4000" type="FERTILIZER" groundType="3" />
+        <sprayType name="LIME"             litersPerSecond="0.1100" type="LIME"       groundType="4" />
+        <sprayType name="HERBICIDE"        litersPerSecond="0.0160" type="HERBICIDE"  groundType="0" />
+        <sprayType name="COMPOST"          litersPerSecond="0.4000" type="FERTILIZER" groundType="6" />
+    </sprayTypes>
+</map>

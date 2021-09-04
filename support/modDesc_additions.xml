@@ -37,6 +37,8 @@
 	<storeItem xmlFilename="HorseExtension/vehicles/Onion/SE260.xml"/>
 	<storeItem xmlFilename="HorseExtension/vehicles/Onion/grimmeFT300.xml"/>
 	<storeItem xmlFilename="HorseExtension/vehicles/Onion/grimmeKS75-4.xml"/>
+	<!-- Compost -->
+	<storeItem xmlFilename="HorseExtension/KompostStation/buyingStation_compost.xml"/>
 </storeItems>
 <!-- End Section -->
 

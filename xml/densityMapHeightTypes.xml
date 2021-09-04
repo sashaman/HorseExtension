@@ -203,5 +203,10 @@
             <collision scale="1.00" baseOffset="0.0" minOffset="0.0" maxOffset="0.0" />
             <textures diffuse="HorseExtension/fillPlanes/rye_diffuse.png" normal="HorseExtension/fillPlanes/rye_normal.png" distance="HorseExtension/fillPlanes/distance/rye_distance.png" />
         </densityMapHeightType>
+<!-- COMPOST -->
+        <densityMapHeightType fillTypeName="compost" maxSurfaceAngle="40" fillToGroundScale="1.0" allowsSmoothing="true" >
+            <collision scale="0.7" baseOffset="0.10" minOffset="0.20" maxOffset="0.60"/>
+            <textures diffuse="HorseExtension/fillPlanes/compost_diffuse.png" normal="HorseExtension/fillPlanes/compost_normal.png" distance="HorseExtension/fillPlanes/distance/compostDistance_diffuse.png"/>
+        </densityMapHeightType>
     </densityMapHeightTypes>
 </map>

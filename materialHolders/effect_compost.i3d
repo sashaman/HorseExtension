@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="effect_materialHolder" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="9" filename="$data/particleSystems/fx_wheatWindrow_normal.png"/>
+    <File fileId="7" filename="$data/shaders/grainSmokeShader.xml"/>
+    <File fileId="3" filename="$data/shaders/grainUnloadingShader.xml"/>
+    <File fileId="11" filename="$data/shaders/morphTargetShader.xml"/>
+    <File fileId="10" filename="$data/shaders/windrowUnloadingShader.xml"/>
+    <File fileId="1" filename="../fillPlanes/compost_diffuse.png"/>
+    <File fileId="2" filename="../fillPlanes/compost_normal.png"/>
+    <File fileId="8" filename="fx_compost_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="compost_mat" materialId="4" customShaderId="3" customShaderVariation="CUSTOM_ALPHA_TEST">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
+      <CustomParameter name="UVScaleSpeed" value="3.5 -2 0 0"/>
+      <CustomParameter name="ColorAlpha" value="1 1 1 1"/>
+      <CustomParameter name="vSpeedFrequencyAmplitudeFadescale" value="10 5 0.25 -0.025"/>
+      <CustomParameter name="alphaBlendStartEnd" value="75 80 -0.001 0.01"/>
+    </Material>
+    <Material name="compost_mat66" materialId="5" customShaderId="3" customShaderVariation="CUSTOM_ALPHA_TEST">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
+      <CustomParameter name="UVScaleSpeed" value="3.5 -2 0 0"/>
+      <CustomParameter name="ColorAlpha" value="1 1 1 1"/>
+      <CustomParameter name="vSpeedFrequencyAmplitudeFadescale" value="10 5 0.25 -0.05"/>
+      <CustomParameter name="alphaBlendStartEnd" value="75 80 -0.001 0.01"/>
+    </Material>
+    <Material name="compost_mat67" materialId="6" customShaderId="3" customShaderVariation="CUSTOM_ALPHA_TEST">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
+      <CustomParameter name="UVScaleSpeed" value="3.5 -2 0 0"/>
+      <CustomParameter name="ColorAlpha" value="1 1 1 1"/>
+      <CustomParameter name="vSpeedFrequencyAmplitudeFadescale" value="10 5 0.25 -0.15"/>
+      <CustomParameter name="alphaBlendStartEnd" value="75 80 -0.001 0.01"/>
+    </Material>
+    <Material name="compost_mat69" materialId="7" customShaderId="11" customShaderVariation="VERTEX_ANIMATION">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="morphPosition" value="0 1 1 2"/>
+      <CustomParameter name="offsetUV" value="0 0 -100 100"/>
+      <CustomParameter name="alphaRemap" value="0 1 0 0"/>
+      <CustomParameter name="uvScale" value="2 2 1 1"/>
+      <CustomParameter name="vertexAnim" value="20 20 0.05 1"/>
+    </Material>
+    <Material name="fx_compost_mat" materialId="8" alphaBlending="true" customShaderId="10" customShaderVariation="WINDROW_CENTER">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
+      <CustomParameter name="UVScaleSpeed" value="3 -1 1 1"/>
+      <CustomParameter name="MaskChannels" value="0 0.7 0 0"/>
+      <CustomParameter name="ColorAlpha" value="1 1 1 3"/>
+      <CustomParameter name="alphaRemap" value="0 1 0 0"/>
+    </Material>
+    <Material name="smoke_biomass" materialId="9" diffuseColor="0.494118 0.494118 0.494118 1" alphaBlending="true" customShaderId="7">
+      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
+      <CustomParameter name="UVScaleSpeed" value="0.75 0.1 -0.3 0"/>
+      <CustomParameter name="ColorAlpha" value="0.01 0.01 0.01 2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="effect_compost.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="unloading" clipDistance="10" nodeId="14">
+      <TransformGroup name="compost" clipDistance="10" nodeId="15">
+        <Shape shapeId="1" name="compost0_025_materialHolder" clipDistance="10" nodeId="16" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="1" name="compost0_05_materialHolder" clipDistance="10" nodeId="17" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="1" name="compost0_15_materialHolder" clipDistance="10" nodeId="18" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="smoke" clipDistance="10" nodeId="19">
+      <TransformGroup name="compost" clipDistance="10" nodeId="20">
+        <Shape shapeId="2" name="compost_materialHolder" clipDistance="10" nodeId="21" materialIds="9" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="spreader" clipDistance="10" nodeId="22">
+      <TransformGroup name="compost" clipDistance="10" nodeId="23">
+        <Shape shapeId="1" name="compost_materialHolder" clipDistance="10" nodeId="24" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="pipe" clipDistance="10" nodeId="25">
+      <TransformGroup name="compost" clipDistance="10" nodeId="26">
+        <Shape shapeId="3" name="compost0_materialHolder" clipDistance="10" nodeId="27" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="16">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="unloading"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="17">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="materialIndex" type="string" value="2"/>
+      <Attribute name="materialType" type="string" value="unloading"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="18">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="materialIndex" type="string" value="3"/>
+      <Attribute name="materialType" type="string" value="unloading"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="21">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="smoke"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="24">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="spreader"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="27">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="belt"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

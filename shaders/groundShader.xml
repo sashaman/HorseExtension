@@ -12,7 +12,7 @@
       <Texture group="terrainDetail" name="noiseMap"                             defaultColorProfile="linearRGB" defaultFilename="$data/shared/noise.png"/>
       <Texture group="terrainDetail" name="baseMap"               type="2dArray" />
       <Texture group="terrainDetail" name="normalMap"             type="2dArray" />
-      <Texture group="terrainDetail" name="groundLayerDiffuseMap" type="2dArray" defaultColorProfile="sRGB" defaultFilename="$data/maps/textures/terrain/ground/groundLayer_diffuse.png"/>
+      <Texture group="terrainDetail" name="groundLayerDiffuseMap" type="2dArray" defaultColorProfile="sRGB" defaultFilename="../foliage/ground/groundLayer_diffuse.png"/>
     </Textures>
     <VertexAttributes>
         <IgnoredVertexAttribute name="tangent" group="base"/>

@@ -6,6 +6,8 @@
 <fruitTypes filename="HorseExtension/xml/fruitTypes.xml" />
 <baleTypes filename="HorseExtension/xml/baleTypes.xml" />
 <densityMapHeightTypes filename="HorseExtension/xml/densityMapHeightTypes.xml" />
+<!-- COMPOST -->
+<sprayTypes filename="HorseExtension/xml/sprayTypes.xml" /> 
 <!-- End section -->
 
 <!-- Add entries to additionalFiles element or add block to root map element if additionalFiles not present -->
@@ -16,5 +18,9 @@
     <additionalFile filename="HorseExtension/materialHolders/effect_materialHolder.i3d" />
     <additionalFile filename="HorseExtension/materialHolders/cutterEffect_materialHolder.i3d" />
     <additionalFile filename="HorseExtension/huds/iconMaterialHolders.i3d" />
+<!-- COMPOST -->
+    <additionalFile filename="HorseExtension/fillPlanes/fillPlane_compost.i3d" />
+    <additionalFile filename="HorseExtension/materialHolders/effect_compost.i3d" />
+    <additionalFile filename="HorseExtension/materialHolders/particle_compost.i3d" />
 </additionalFiles>
 <!-- End additionalFiles section -->

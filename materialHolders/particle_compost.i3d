@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="particle_materialHolder" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="C:/Users/alexh/Documents/My Games/FarmingSimulator2019/mods/FS19_Perle/HorseExtension/materialHolders/fx_compost4x1_diffuse.png"/>
+    <File fileId="2" filename="$data/particleSystems/fx_manure4x1_normal.png"/>
+    <File fileId="5" filename="$data/particleSystems/fx_smoke6x6_01_diffuse.png"/>
+    <File fileId="6" filename="$data/particleSystems/fx_smoke6x6_01_normal.png"/>
+    <File fileId="3" filename="$data/shaders/psSubUVShader.xml"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="fx_compostSmall_mat" materialId="4" customShaderId="3">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="psPlayScale" value="1 2 0 1"/>
+      <CustomParameter name="psColor" value="1 1 1 1"/>
+    </Material>
+    <Material name="fx_smoke01_mat" materialId="5" alphaBlending="true" customShaderId="3">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <CustomParameter name="psPlayScale" value="1 2 0 1"/>
+      <CustomParameter name="psColor" value="0.01 0.01 0.01 1"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="particle_compost.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+    <ParticleSystem name="smokeEmitter" dynamicId="3" type="sprite" rate="0.015" lifespan="1200" maxCount="200" speed="0.0003" speedRandom="0.001" tangentSpeed="0" normalSpeed="1" damping="0.5" spriteScaleX="1" spriteScaleY="1" spriteScaleXGain="0.003" spriteScaleYGain="0.003" blendFactor="0.4" blendInFactor="0" blendOutFactor="0.5" depthSort="true" randomInitRotation="true" deltaRotateMin="-0.000349066" deltaRotateMax="0.000349066" textureAtlasSizeX="6" textureAtlasSizeY="6">
+      <Gravity force="0 0 0"/>
+    </ParticleSystem>
+    <ParticleSystem name="smokeEmitter" dynamicId="5" type="sprite" rate="0.015" lifespan="1200" maxCount="200" speed="0.003" speedRandom="0.001" tangentSpeed="0" normalSpeed="1" damping="0.5" spriteScaleX="1" spriteScaleY="1" spriteScaleXGain="0.003" spriteScaleYGain="0.003" blendFactor="0.4" blendInFactor="0" blendOutFactor="0.5" depthSort="true" randomInitRotation="true" deltaRotateMin="-0.000349066" deltaRotateMax="0.000349066" textureAtlasSizeX="6" textureAtlasSizeY="6">
+      <Gravity force="0 0 0"/>
+    </ParticleSystem>
+    <ParticleSystem name="manureEmitter" dynamicId="1" type="sprite" rate="0.25" lifespan="800" maxCount="300" speed="0.0005" speedRandom="0.001" tangentSpeed="0" normalSpeed="1" spriteScaleX="0.3" spriteScaleY="0.3" spriteScaleXGain="0.001" spriteScaleYGain="0.001" blendFactor="1" blendInFactor="0" blendOutFactor="1" randomInitRotation="true" deltaRotateMin="-0.000349066" deltaRotateMax="0.000349066" textureAtlasSizeX="4">
+      <Gravity force="0 -0.8 0"/>
+    </ParticleSystem>
+    <ParticleSystem name="manureEmitter" dynamicId="4" type="sprite" rate="0.25" lifespan="800" maxCount="300" speed="0.005" speedRandom="0.001" tangentSpeed="0" normalSpeed="1" spriteScaleX="1" spriteScaleY="1" spriteScaleXGain="0.001" spriteScaleYGain="0.001" blendFactor="1" blendInFactor="0" blendOutFactor="1" randomInitRotation="true" deltaRotateMin="-0.000349066" deltaRotateMax="0.000349066" textureAtlasSizeX="4">
+      <Gravity force="0 -0.8 0"/>
+    </ParticleSystem>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="unloadingParticles" nodeId="17">
+      <TransformGroup name="compost" nodeId="18">
+        <TransformGroup name="compost" nodeId="19">
+          <Dynamic dynamicId="1" emitterShapeNodeId="22" name="compostEmitter" clipDistance="150" nodeId="21" materialIds="4" distanceBlending="false">
+            <Shape shapeId="2" name="emitShape" nodeId="22" materialIds="6" nonRenderable="true"/>
+          </Dynamic>
+        </TransformGroup>
+        <TransformGroup name="compostSmoke" nodeId="23">
+          <Dynamic dynamicId="3" emitterShapeNodeId="26" name="smokeEmitter" clipDistance="100" nodeId="25" materialIds="5" distanceBlending="false">
+            <Shape shapeId="2" name="emitShape" nodeId="26" materialIds="5" nonRenderable="true"/>
+          </Dynamic>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="spreaderParticles" nodeId="27">
+      <TransformGroup name="compost" nodeId="28">
+        <TransformGroup name="spreader" nodeId="29">
+          <Dynamic dynamicId="4" emitterShapeNodeId="32" name="compostEmitter" clipDistance="150" nodeId="31" materialIds="4" distanceBlending="false">
+            <Shape shapeId="2" name="emitShape" nodeId="32" materialIds="6" nonRenderable="true"/>
+          </Dynamic>
+        </TransformGroup>
+        <TransformGroup name="spreader_smoke" nodeId="33">
+          <Dynamic dynamicId="5" emitterShapeNodeId="36" name="smokeEmitter" clipDistance="100" nodeId="35" materialIds="5" distanceBlending="false">
+            <Shape shapeId="2" name="emitShape" nodeId="36" materialIds="5" nonRenderable="true"/>
+          </Dynamic>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="21">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="UNLOADING"/>
+    </UserAttribute>
+    <UserAttribute nodeId="25">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="SMOKE"/>
+    </UserAttribute>
+    <UserAttribute nodeId="31">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="SPREADER"/>
+    </UserAttribute>
+    <UserAttribute nodeId="35">
+      <Attribute name="fillType" type="string" value="compost"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="SPREADER_SMOKE"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
