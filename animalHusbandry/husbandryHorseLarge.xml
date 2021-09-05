@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_animalPen_horse2</name>
+        <image>HorseExtension/animalHusbandry/store_husbandryHorseLarge.png</image>
+        <price>95000</price>
+        <functions>
+            <function>$l10n_function_animalPenHorse</function>
+        </functions>
+        <lifetime>1000</lifetime>
+        <dailyUpkeep>95</dailyUpkeep>
+        <rotation>0</rotation>
+        <brand>Lizard</brand>
+        <species>placeable</species>
+        <category>animalpens</category>
+        <vertexBufferMemoryUsage>233792</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>29088</indexBufferMemoryUsage>
+        <textureMemoryUsage>9212616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <placeableType>husbandry</placeableType>
+    <filename>HorseExtension/animalHusbandry/husbandryHorseLarge.i3d</filename>
+    <placement testSizeX="60.0" testSizeZ="46.0" sizeX="54" sizeZ="40" useRandomYRotation="false" useManualYRotation="true" />
+
+    <clearAreas>
+        <clearArea startNode="0|7|0" widthNode="0|7|0|0" heightNode="0|7|0|1"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="0|8|0" widthNode="0|8|0|0" heightNode="0|8|0|1" groundType="grass"/>
+            <levelArea startNode="0|8|1" widthNode="0|8|1|0" heightNode="0|8|1|1" groundType="dirt"/>
+            <levelArea startNode="0|8|2" widthNode="0|8|2|0" heightNode="0|8|2|1" groundType="dirt"/>
+            <levelArea startNode="0|8|3" widthNode="0|8|3|0" heightNode="0|8|3|1" groundType="dirt"/>
+            <levelArea startNode="0|8|4" widthNode="0|8|4|0" heightNode="0|8|4|1" groundType="dirt"/>
+        </levelAreas>
+        <rampAreas> <!-- Deprecated! no longer used in script -->
+            <rampArea maxSlope="75" rootNode="0|9|0" startNode="0|9|0" widthNode="0|9|0|0" heightNode="0|9|0|1" groundType="grassRough"/>
+            <rampArea maxSlope="75" rootNode="0|9|1" startNode="0|9|1" widthNode="0|9|1|0" heightNode="0|9|1|1" groundType="grassRough"/>
+            <rampArea maxSlope="75" rootNode="0|9|2" startNode="0|9|2" widthNode="0|9|2|0" heightNode="0|9|2|1" groundType="grassRough"/>
+            <rampArea maxSlope="75" rootNode="0|9|3" startNode="0|9|3" widthNode="0|9|3|0" heightNode="0|9|3|1" groundType="grassRough"/>
+        </rampAreas>
+    </leveling>
+
+    <foliageAreas>
+        <foliageArea fruitType="grass" rootNode="0|10|0" />
+    </foliageAreas>
+	
+	<dayNightObjects>
+        <dayNightObject node="0|6|0|0|0|0|0" intensityDay="0" intensityNight="1" />
+        <dayNightObject node="0|6|0|0|0|0|1" visibleDay="false" visibleNight="true" />
+		<dayNightObject node="0|15|4|0|0|0" intensityDay="0" intensityNight="1" />
+        <dayNightObject node="0|15|4|0|0|1" visibleDay="false" visibleNight="true" />
+		<dayNightObject node="0|15|5|0|0|0" intensityDay="0" intensityNight="1" />
+        <dayNightObject node="0|15|5|0|0|1" visibleDay="false" visibleNight="true" />
+    </dayNightObjects>
+
+    <triggerMarkers>
+        <triggerMarker node="0|11" />
+    </triggerMarkers>
+
+    <hotspots>
+        <hotspot name="Horse stable" fullName="$l10n_animals_horseStable" imageName="HORSE_STABLE" hidable="true" category="CATEGORY_TRIGGERS" />
+    </hotspots>
+
+    <animatedObjects>
+        <animatedObject saveId="gate_01" >
+            <animation duration="1.5">
+                <part node="0|6|1|0|0">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -120 0"/>
+                </part>
+                <part node="0|6|1|0|1">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="0|12" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gate_loop.wav" loops="0" linkNode="0|6|1|0" volume="0.8" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gate_opened.wav" linkNode="0|6|1|0" volume="0.8" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gate_closed.wav" linkNode="0|6|1|0" volume="0.8" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+        <animatedObject saveId="gate_02" >
+            <animation duration="1.5">
+                <part node="0|6|1|1|0">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -120 0"/>
+                </part>
+                <part node="0|6|1|1|1">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="0|13" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gate_loop.wav" loops="0" linkNode="0|6|1|1" volume="0.8" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gate_opened.wav" linkNode="0|6|1|1" volume="0.8" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gate_closed.wav" linkNode="0|6|1|1" volume="0.8" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+
+    <husbandry saveId="Animals_HORSE" hasStatistics="false">
+        <modules>
+            <module name="animals">
+                <config type="HORSE" navmeshNode="0|5" animalLoadTriggerNode="0|0" maxNumAnimals="16" husbandryFileName="$dataS/character/horseAnimalHusbandry.xml" placementRaycastDistance="2.0" carryingCapacity="50" rideableDeliveryStartNode="0|7|0" rideableDeliveryWidthNode="0|7|0|0" rideableDeliveryHeightNode="0|7|0|1" />
+            </module>
+            <module name="food">
+                <config node="0|1|0" exactFillRootNode="0" baleTriggerNode="3" animalPlacesNode="1" >
+                    <fillPlane node="0|1|1" minY="-0.29" maxY="0" colorChange="true" />
+                </config>
+            </module>
+            <module name="water">
+                <config node="0|2|0" exactFillRootNode="0" fillTypes="WATER" acceptedToolTypes="undefined trailer">
+                    <fillPlane node="0|2|1" minY="0.06" maxY="0.275" colorChange="true" />
+                </config>
+            </module>
+			
+			<module name="manure">
+                <config startNode="0|14|1|0" widthNode="0|14|1|0|0" heightNode="0|14|1|0|1" fillType="MANURE"/>
+            </module>
+			<module name="foodSpillage">
+                <config fillType="MANURE">
+                    <area startNode="0|1|0|2|0" widthNode="0|1|0|2|0|0" heightNode="0|1|0|2|0|1" />
+                    <area startNode="0|1|0|2|1" widthNode="0|1|0|2|1|0" heightNode="0|1|0|2|1|1" />
+                    <area startNode="0|1|0|2|2" widthNode="0|1|0|2|2|0" heightNode="0|1|0|2|2|1" />
+                </config>
+            </module>
+			
+            <module name="straw">
+                <config node="0|3" exactFillRootNode="0" baleTriggerNode="2" fillTypes="STRAW">
+                    <fillPlane node="0|3|1" minY="-0.27" maxY="0.0" colorChange="false" />
+                </config>
+            </module>
+        </modules>
+        <placementRaycast distance="2" />
+    </husbandry>
+
+    <tipOcclusionUpdateArea sizeX="54" sizeZ="40" />
+
+</placeable>

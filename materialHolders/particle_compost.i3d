@@ -6,7 +6,7 @@
   </Asset>
 
   <Files>
-    <File fileId="1" filename="C:/Users/alexh/Documents/My Games/FarmingSimulator2019/mods/FS19_Perle/HorseExtension/materialHolders/fx_compost4x1_diffuse.png"/>
+    <File fileId="1" filename="fx_compost4x1_diffuse.png"/>
     <File fileId="2" filename="$data/particleSystems/fx_manure4x1_normal.png"/>
     <File fileId="5" filename="$data/particleSystems/fx_smoke6x6_01_diffuse.png"/>
     <File fileId="6" filename="$data/particleSystems/fx_smoke6x6_01_normal.png"/>
