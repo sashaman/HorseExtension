@@ -39,6 +39,8 @@
 	<storeItem xmlFilename="HorseExtension/vehicles/Onion/grimmeKS75-4.xml"/>
 	<!-- Compost -->
 	<storeItem xmlFilename="HorseExtension/KompostStation/buyingStation_compost.xml"/>
+	<!-- M+ Horse Husbandry -->
+	<storeItem xmlFilename="HorseExtension/animalHusbandry/husbandryHorseLarge.xml"/>
 </storeItems>
 <!-- End Section -->
 
